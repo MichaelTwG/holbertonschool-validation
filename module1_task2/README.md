@@ -68,7 +68,7 @@ The diferent steps are:
 - Clean the current build
 - Create new posts
 - Make a new build with the newest posts
-
+- Need Help
 
 ### Clean the current buil
 ```
@@ -83,4 +83,8 @@ make POST_NAME=file_name_of_post POST_TITLE="Title of the new post" post
 ### Make a new build
 ```
 make build
+```
+### Need Help
+```
+make help
 ```
