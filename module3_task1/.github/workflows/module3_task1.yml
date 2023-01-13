@@ -8,6 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     working-directory: module3_task1
+    env: 
+          POST_TITLE:"file"
+          POST_NAME:"Trying a new Post"
     steps:
       - name: Clone the current repository
         uses: actions/checkout@v3
@@ -17,7 +20,6 @@ jobs:
         run: make clean
       - name: try a make post
         run: make post
-        env: POST_TITLE=file POST_NAME="Trying a new Post"
       - name: try a make build
         run: make build
       - name: try make help
