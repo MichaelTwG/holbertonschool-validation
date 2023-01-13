@@ -10,11 +10,11 @@ jobs:
       - name: Clone the current repository
         uses: actions/checkout@v3
       - name: Changue the current directory
-        run: cd module3_task1 && source setup.sh
+        run: cd module3_task1 && ./setup.sh
       - name: try a make clean
         run: cd module3_task1 && make clean
       - name: try a make post
-        run: cd make POST_TITLE="my new post" POST_NAME="file" post
+        run: cd module3_task1 && make POST_TITLE="my new post" POST_NAME="file" post
       - name: try a make build
         run: cd module3_task1 && make build
       - name: try make help
