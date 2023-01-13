@@ -4,12 +4,12 @@ on:
     - cron: "0 0 * * *"
   push:
 
+  env: 
+    POST_TITLE: file
+    POST_NAME: "Trying a new Post"
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    env: 
-          POST_TITLE:"file"
-          POST_NAME:"Trying a new Post"
     steps:
       - name: Clone the current repository
         uses: actions/checkout@v3
