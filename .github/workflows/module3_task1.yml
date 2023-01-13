@@ -3,13 +3,9 @@ on:
   schedule:
     - cron: "0 0 * * *"
   push:
-
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    env: 
-          POST_TITLE:"file"
-          POST_NAME:"Trying a new Post"
     steps:
       - name: Clone the current repository
         uses: actions/checkout@v3
@@ -18,7 +14,7 @@ jobs:
       - name: try a make clean
         run: cd module3_task1 && make clean
       - name: try a make post
-        run: cd module3_task1 && make post
+        run: cd module3_task1 && make POST_TITLE=file POST_NAME="Trying a new Post" post
       - name: try a make build
         run: cd module3_task1 && make build
       - name: try make help
