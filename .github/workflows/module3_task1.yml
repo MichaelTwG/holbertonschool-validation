@@ -7,7 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    working-directory: module3_task1
     env: 
           POST_TITLE:"file"
           POST_NAME:"Trying a new Post"
@@ -15,12 +14,12 @@ jobs:
       - name: Clone the current repository
         uses: actions/checkout@v3
       - name: Changue the current directory
-        run: source setup.sh
+        run: cd module3_task1 && source setup.sh
       - name: try a make clean
-        run: make clean
+        run: cd module3_task1 && make clean
       - name: try a make post
-        run: make post
+        run: cd module3_task1 && make post
       - name: try a make build
-        run: make build
+        run: cd module3_task1 && make build
       - name: try make help
-        run: make help
+        run: cd module3_task1 && make help
