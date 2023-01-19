@@ -1,0 +1,4 @@
+[jenkins]
+  hosts: 1
+[production]
+  hosts: 2
